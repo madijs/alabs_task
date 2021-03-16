@@ -5,7 +5,7 @@ type ReturnType<T> = [
     React.Dispatch<React.SetStateAction<T | undefined>>
 ]
 
-export const useLocalStorage = <T,> (key: string, initialValue?: T) : ReturnType<T> => {
+export const useLocalStorageState = <T,> (key: string, initialValue?: T) : ReturnType<T> => {
     const [state, setState] = useState<T | any>(()=>{
         try{
             const value = localStorage.getItem(key);
