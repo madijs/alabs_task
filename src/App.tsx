@@ -4,7 +4,7 @@ import {useLocalStorageState} from "./tools/useLocalStorage";
 import ChildForms from "./ChildForms";
 
 const App: React.FC = () => {
-  const [state,setState] = useLocalStorageState('name');
+  const [state,setState] = useLocalStorageState('name','good job');
   const [deleteClicked,setDeleteClick] = useState<boolean | null>(null);
 
   const inputHandleChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
